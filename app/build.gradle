@@ -30,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // TODO 1: Add data binding to gradle
     buildFeatures {
         dataBinding true
     }
