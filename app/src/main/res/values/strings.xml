@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">Nolverto Urias</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">
+        Hi, my name is Nolverto.
+        \n\n I love to learn new things about programming languages.
+        \n\n I like to listen instrumental and electronic music.
+        \n\n I love to play with dogs, walk and swimming
+        \n\n I would be really happy to help you learning a programming language
+             or solving some problems
+        \n\n I like to eat chinese and mexican food.
+        \n\n My soccer team is Chivas of Guadalajara.
+        \n\n I like to think that some day Mexico soccer team will be the champion of the world cup.
+        \n\n I like riding bycicle.
+        \n\n In my free times i like to solve jigsaw puzzles with my girlfriend.
+    </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done">Done</string>
+</resources>
