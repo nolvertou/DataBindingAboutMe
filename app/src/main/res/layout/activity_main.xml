@@ -6,7 +6,9 @@
     tools:context=".MainActivity">
 
     <data>
-
+        <variable
+            name="myName"
+            type="nou.com.example.databindingaboutme.MyName" />
     </data>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,7 +24,7 @@
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:text="@={myName.name}"
             android:textAlignment="center" />
 
         <EditText
@@ -52,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:text="@={myName.nickname}"
             android:visibility="gone" />
 
         <ImageView

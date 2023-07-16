@@ -11,6 +11,7 @@ import nou.com.example.databindingaboutme.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val myName: MyName = MyName("Nolverto Urias")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 //        setContentView(binding.root)
 
+        binding.myName = myName
+
         binding.doneButton.setOnClickListener {
             addNickname(it)
         }
@@ -26,16 +29,13 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun addNickname(view: View){
-        val nicknameEditText = binding.nicknameEdit
-        val nicknameTextView = binding.nicknameText
-
         // Use binding.apply to make the code easier to read
         binding.apply {
-            nicknameTextView.text = nicknameEditText.text   // Gets the input from editText
+            myName?.nickname = nicknameEdit.text.toString() // Gets the input from editText using dataBinding
             invalidateAll()                                 // Refresh UI with the new data
-            nicknameEditText.visibility = View.GONE         // Hides the editText element
-            view.visibility = View.GONE                     // Hides the view element
-            nicknameTextView.visibility = View.VISIBLE      // Shows the nicknameTextView
+            nicknameEdit.visibility = View.GONE             // Hides the editText element
+            view.visibility = View.GONE                     // Hides the view element (doneButton)
+            nicknameText.visibility = View.VISIBLE          // Shows the nicknameTextView
         }
 
         // Hide the keyboard after input is complete
